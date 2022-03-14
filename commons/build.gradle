@@ -2,6 +2,8 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
 }
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.datalogic'
 
 android {
     compileSdkVersion 30
@@ -77,3 +79,7 @@ task sourcesJar(type: Jar) {
 //        maven publishCI
 //    }
 //}
+
+artifacts {
+    archives sourcesJar
+}
